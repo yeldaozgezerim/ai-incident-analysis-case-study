@@ -1,0 +1,48 @@
+{
+  "case_id": "DEMO-001",
+  "timezone": "UTC",
+  "data_classification": "synthetic_public_example",
+  "events": [
+    {
+      "id": "E01",
+      "event_time": "2026-01-15T10:00:00Z",
+      "recorded_time": "2026-01-15T10:00:04Z",
+      "component": "release-controller",
+      "kind": "deployment",
+      "detail": "Limited rollout began."
+    },
+    {
+      "id": "E02",
+      "event_time": "2026-01-15T10:04:00Z",
+      "recorded_time": "2026-01-15T10:04:08Z",
+      "component": "transaction-api",
+      "kind": "timeout",
+      "detail": "Request timeout observed on canary route."
+    },
+    {
+      "id": "E03",
+      "event_time": "2026-01-15T10:04:00Z",
+      "recorded_time": "2026-01-15T10:06:00Z",
+      "component": "log-forwarder",
+      "kind": "forwarded_copy",
+      "detail": "Duplicate of E02.",
+      "duplicate_of": "E02"
+    },
+    {
+      "id": "E04",
+      "event_time": "2026-01-15T10:07:00Z",
+      "recorded_time": "2026-01-15T10:07:05Z",
+      "component": "notification-queue",
+      "kind": "delay",
+      "detail": "Queue age increased."
+    },
+    {
+      "id": "E05",
+      "event_time": "2026-01-15T09:55:00Z",
+      "recorded_time": "2026-01-15T10:08:00Z",
+      "component": "identity-provider",
+      "kind": "login_failure",
+      "detail": "Authentication errors preceded the release."
+    }
+  ]
+}
